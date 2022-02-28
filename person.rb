@@ -1,42 +1,27 @@
 class Person
-    DEFAULT_BOOL = true
-  
-    def initialize(age, name = 'Unknown', parent_permission = DEFAULT_BOOL)
-      @id = rand(1..1000)
-      @name = name
-      @age = age
-      @parent_permission = parent_permission
-    end
+  DEFAULT_BOOL = true
 
-    # Getters
-    def id
-      @id
-    end
-    
-    def name
-      @name
-    end
+  def initialize(age, name = 'Unknown', parent_permission = DEFAULT_BOOL)
+    @id = rand(1..1000)
+    @name = name
+    @age = age
+    @parent_permission = parent_permission
+  end
 
-    def age()
-      @age
-    end
+  # Getters
+  attr_reader :id
 
-    # Setters
-    def name=(name)
-      @name = name
-    end
+  attr_accessor :name, :age
 
-    def age=(age)
-      @age = age
-    end
+  # Setters
 
-    def can_use_services?
-        is_of_age? || @parent_permission
-    end
+  def can_use_services?
+    isof_age? || @parent_permission
+  end
 
-    private
+  private
 
-    def is_of_age?
-      age >= 18
-    end
+  def isof_age?
+    age >= 18
+  end
 end
