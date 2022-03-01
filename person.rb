@@ -16,12 +16,12 @@ class Person
   # Setters
 
   def can_use_services?
-    isof_age? || @parent_permission
+    is_of_age? || @parent_permission
   end
 
   private
 
-  def isof_age?
+  def is_of_age?
     age >= 18
   end
 end
