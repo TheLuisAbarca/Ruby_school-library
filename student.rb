@@ -5,7 +5,7 @@ class Student < Person
     super(age, name, parent_permission)
   end
 
-  attr_accessor :classroom
+  attr_reader :classroom
 
   def classroom=(classroom)
     @classroom = classroom
