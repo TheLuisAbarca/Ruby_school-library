@@ -14,9 +14,9 @@ class Person
   end
 
   # Getters
-  attr_reader :id
+  attr_reader :id, :rentals
 
-  attr_accessor :name, :age, :rentals
+  attr_accessor :name, :age
 
   # Setters
 
