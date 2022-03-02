@@ -1,4 +1,5 @@
 require_relative 'corrector'
+require_relative 'rental'
 
 class Person
   DEFAULT_BOOL = true
@@ -9,10 +10,11 @@ class Person
     @age = age
     @parent_permission = parent_permission
     @corrector = Corrector.new
+    @rentals = []
   end
 
   # Getters
-  attr_reader :id
+  attr_reader :id, :rentals
 
   attr_accessor :name, :age
 
@@ -24,6 +26,10 @@ class Person
 
   def can_use_services?
     is_of_age? || @parent_permission
+  end
+
+  def rent(date, book)
+    Rental.new(date, book, self)
   end
 
   private
