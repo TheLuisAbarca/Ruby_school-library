@@ -6,6 +6,6 @@ class Rental
     @person = person
     person.rentals.push(self)
   end
-  
+
   attr_accessor :date, :book, :person
 end

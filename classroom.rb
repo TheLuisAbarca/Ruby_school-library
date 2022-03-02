@@ -3,7 +3,7 @@ class Classroom
     @label = label
     @students = []
   end
-  
+
   attr_accessor :label
   attr_reader :students
 
