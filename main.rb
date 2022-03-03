@@ -17,7 +17,7 @@ class App
     clear_screen
     main_greeting_message
     progress_bar
-    #loading_effect
+    # loading_effect
   end
 
   def clear_screen
@@ -32,23 +32,22 @@ class App
 
   def progress_bar
     loading = 'Loading System ['
-    1000.times do |i| 
-    j = i + 1
-      if j % 10 == 0
-        loading << "="
-        print "\r"
-        print loading + " #{j / 10} %" if j / 10 != 100
-        print loading + " #{j / 10} %]" if j / 10 == 100
-        $stdout.flush
-        sleep 0.05
-        print "\r"
-      end
+    1000.times do |i|
+      j = i + 1
+      next unless (j % 10).zero?
+
+      loading << '='
+      print "\r"
+      print loading + " #{j / 10} %" if j / 10 != 100
+      print loading + " #{j / 10} %]" if j / 10 == 100
+      $stdout.flush
+      sleep 0.05
+      print "\r"
     end
     puts
   end
 
-  #100.times {|p| print "\rDownloading %#{p+1}..."; sleep 1}
-
+  # 100.times {|p| print "\rDownloading %#{p+1}..."; sleep 1}
 
   def main_greeting_message
     puts ' ____       _                 _   _     _ _                          '
@@ -58,12 +57,12 @@ class App
     puts '|____/ \___|_| |_|\___/ \___/|_| |_____|_|_.__/|_|  \__,_|_|   \__, |'
     puts '                                                               |___/ '
 
-    puts'                 ____            _                 '
-    puts'                / ___| _   _ ___| |_ ___ _ __ ___  '
-    puts'                \___ \| | | / __| __/ _ \ \'_ ` _ \ '
-    puts'                 ___) | |_| \__ \ ||  __/ | | | | |'
-    puts'                |____/ \__, |___/\__\___|_| |_| |_|'
-    puts'                       |___/                       '
+    puts '                 ____            _                 '
+    puts '                / ___| _   _ ___| |_ ___ _ __ ___  '
+    puts '                \___ \| | | / __| __/ _ \ \'_ ` _ \ '
+    puts '                 ___) | |_| \__ \ ||  __/ | | | | |'
+    puts '                |____/ \__, |___/\__\___|_| |_| |_|'
+    puts '                       |___/                       '
   end
 
   def exit_greeting_message
@@ -82,7 +81,7 @@ class App
     puts '                      | |_| \__ \ | | | | (_| |'
     puts '                       \__,_|___/_|_| |_|\__, |'
     puts '                                         |___/ '
-    
+
     puts
     main_greeting_message
   end
