@@ -11,7 +11,7 @@ class App
 
   def initialize
     @options_answer = 0
-    @books = []
+    @book = []
     @persons = []
 
     clear_screen
