@@ -1,8 +1,10 @@
 require_relative '../classes/student.rb'
 require_relative '../classes/teacher.rb'
+require_relative 'tui'
 
 class Persons
-  MAIN_INPUT_MESSAGE = 'Enter an option number here --> '.freeze
+  include Tui  
+  attr_reader :persons  
 
   def initialize
     @persons = []
