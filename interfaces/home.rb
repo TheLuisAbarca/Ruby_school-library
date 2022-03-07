@@ -11,10 +11,10 @@ class App
   def initialize
     @options_answer = 0
     @books = Books.new
+    @persons = Persons.new
     clear_screen
     main_greeting_message
     progress_bar
-    #@persons = Persons.new
     #@rentals = Rentals.new
 
   end
@@ -41,9 +41,13 @@ class App
       gets
       puts
     when 2
-      #show_all_persons
+      @persons.show_all_persons
+      print MAIN_PRESSENTER_MESSAGE
+      gets
+      puts
     when 3
-      #create_person
+      @persons.create_person
+
     when 4
       @books.create_book
     when 5
@@ -58,7 +62,6 @@ class App
       loading_effect
       clear_screen
     end
-
   end
 
   def main
@@ -69,36 +72,6 @@ class App
       option_selected
     end
   end
-
-
-
-  def show_all_persons
-    puts 'List of persons:'
-    puts 'EMPTY' if @persons.empty?
-    puts(@persons.map { |person| "[#{person.class}] - Name: #{person.name}, Age: #{person.age}, ID: #{person.id}" })
-    print MAIN_PRESSENTER_MESSAGE
-    gets
-    puts
-  end
-
-  def create_person
-    puts 'Do you want to create a student (1), or a teacher (2)? [Press or Input the number]:'
-    print MAIN_INPUT_MESSAGE
-    case gets.chomp.to_i
-    when 1
-      create_student
-    when 2
-      create_teacher
-    else
-      puts
-      puts 'Invalid option choosed, please choose one that is listed.'
-      puts
-      create_person
-    end
-    puts
-  end
-
-
 
   def create_rental
     puts 'Select a book from the following list:'
@@ -133,31 +106,5 @@ class App
     puts
   end
 
-  private
 
-  def create_student
-    print 'Age --> '
-    age = gets.chomp.to_i
-    print 'Name --> '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N] --> '
-    permission = gets.chomp.upcase
-    permission = permission != 'N'
-    @persons << Student.new(age, name, permission)
-    puts 'Student created successfully!'
-    puts
-  end
-
-  def create_teacher
-    print 'Age --> '
-    age = gets.chomp.to_i
-    print 'Name --> '
-    name = gets.chomp
-    print 'Specialty --> '
-    specialty = gets.chomp
-    @persons << Teacher.new(age, name, specialty)
-    puts
-    puts 'Teacher created successfully!'
-    puts
-  end
 end
