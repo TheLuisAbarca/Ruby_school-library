@@ -13,6 +13,7 @@ You need to have Ruby in you operating system to run the irb terminal.
 * Else, fork a copy to your repository and clone it locally:
 > `$ git clone https://github.com/TheLuisAbarca/Ruby_school-library/
 $ cd Ruby_school-library`
+$ bundler install
 
 * Now, run the command ruby filename.rb in your terminal to check if solutions are printed correctly.
 
