@@ -1,6 +1,9 @@
 require 'os'
 
 module Tui
+  MAIN_INPUT_MESSAGE = 'Enter an option number here --> '.freeze
+  MAIN_PRESSENTER_MESSAGE = 'Press ENTER to continue'.freeze
+
   def main_greeting_message
     puts ' ____       _                 _   _     _ _                          '
     puts '/ ___|  ___| |__   ___   ___ | | | |   (_) |__  _ __ __ _ _ __ _   _ '
