@@ -68,5 +68,4 @@ module Tui
     puts
   end
 
-  # 100.times {|p| print "\rDownloading %#{p+1}..."; sleep 1}
 end
