@@ -1,10 +1,10 @@
-require_relative '../classes/student.rb'
-require_relative '../classes/teacher.rb'
+require_relative '../classes/student'
+require_relative '../classes/teacher'
 require_relative 'tui'
 
 class Persons
-  include Tui  
-  attr_reader :persons  
+  include Tui
+  attr_reader :persons
 
   def initialize
     @persons = []
@@ -59,5 +59,4 @@ class Persons
     puts 'Teacher created successfully!'
     puts
   end
-
 end

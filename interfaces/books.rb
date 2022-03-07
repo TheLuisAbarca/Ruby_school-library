@@ -2,6 +2,7 @@ require_relative '../classes/book'
 
 class Books
   attr_reader :books
+
   def initialize
     @books = []
   end

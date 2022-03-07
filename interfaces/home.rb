@@ -3,7 +3,7 @@ require_relative 'persons'
 require_relative 'rentals'
 require_relative 'tui'
 
-class App   
+class App
   include Tui
 
   def initialize
@@ -19,13 +19,13 @@ class App
   def show_main_options
     clear_screen
     menu = "Please choose an option by entering a number:\n"\
-    "1 - List all books\n"\
-    "2 - List all people\n"\
-    "3 - Create a person\n"\
-    "4 - Create a book\n"\
-    "5 - Create a rental\n"\
-    "6 - List all rentals for a given person ID\n"\
-    "7 - Exit\n"
+           "1 - List all books\n"\
+           "2 - List all people\n"\
+           "3 - Create a person\n"\
+           "4 - Create a book\n"\
+           "5 - Create a rental\n"\
+           "6 - List all rentals for a given person ID\n"\
+           "7 - Exit\n"
     print menu
     print MAIN_INPUT_MESSAGE
   end
@@ -68,5 +68,4 @@ class App
       option_selected
     end
   end
-
 end
