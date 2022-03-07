@@ -67,5 +67,4 @@ module Tui
     end
     puts
   end
-
 end
