@@ -13,7 +13,7 @@ class App
     @rentals = Rentals.new
     clear_screen
     main_greeting_message
-    progress_bar
+    # progress_bar
   end
 
   def present_message

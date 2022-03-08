@@ -14,7 +14,7 @@ class Person
   end
 
   # Getters
-  attr_reader :id, :rentals
+  attr_reader :id, :rentals, :parent_permission
 
   attr_accessor :name, :age
 

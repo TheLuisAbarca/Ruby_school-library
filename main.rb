@@ -1,5 +1,6 @@
 require_relative './interfaces/home'
 require_relative './interfaces/tui'
+require_relative './interfaces/fileStorage'
 
 def main
   @app = App.new
@@ -39,16 +40,23 @@ def main
       @app.rentals.show_all_rentals(@app.persons.persons)
     else
       puts 'Exiting session'
+      #save_json2files(@app.books.books, @app.persons.persons)
+      print "#{@app.books.books}\n"
+      print "#{@app.persons.persons}\n"
+      print "#{@app.rentals.rentals}\n"
+      save_json2files(@app.books.books, @app.persons.persons, @app.rentals.rentals)
+      #save_json2files
       loading_effect
-      clear_screen
-      exit_greeting_message
-      loading_effect
-      clear_screen
+      # clear_screen
+      # exit_greeting_message
+      # loading_effect
+      # clear_screen
     end
   end
 
   main_screen = lambda do
     include Tui
+    include FileStorage
     until @options_answer == 7
       show_main_options.call
       @options_answer = gets.chomp.to_i

@@ -8,6 +8,8 @@ class Persons
 
   def initialize
     @persons = []
+    @persons << Teacher.new(30, 'John', 'Math')
+    @persons << Student.new(20, 'Mary', false)
   end
 
   def create_person

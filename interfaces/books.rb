@@ -5,6 +5,7 @@ class Books
 
   def initialize
     @books = []
+    @books << Book.new('The Hobbit', 'J.R.R. Tolkien')
   end
 
   def create_book
