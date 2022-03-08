@@ -5,8 +5,16 @@ class Books
 
   def initialize
     @books = []
-    @books << Book.new('The Hobbit', 'J.R.R. Tolkien')
   end
+
+  def add_book(element)
+    @books << element
+  end
+
+  def find_by_id(id)
+    @books.find { |book| book.id == id }
+  end
+  
 
   def create_book
     puts 'Please, enter book information below:'

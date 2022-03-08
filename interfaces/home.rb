@@ -2,9 +2,12 @@ require_relative 'books'
 require_relative 'persons'
 require_relative 'rentals'
 require_relative 'tui'
+require_relative 'fileStorage'
+
 
 class App
   include Tui
+  include FileStorage
   attr_reader :books, :persons, :rentals
 
   def initialize
@@ -14,6 +17,7 @@ class App
     clear_screen
     main_greeting_message
     # progress_bar
+    read_from_json
   end
 
   def present_message

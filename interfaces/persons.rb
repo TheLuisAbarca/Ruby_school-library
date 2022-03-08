@@ -8,8 +8,14 @@ class Persons
 
   def initialize
     @persons = []
-    @persons << Teacher.new(30, 'John', 'Math')
-    @persons << Student.new(20, 'Mary', false)
+  end
+
+  def add_person(element)
+    @persons << element
+  end
+  
+  def find_by_id(id)
+    @persons.find { |person| person.id == id }
   end
 
   def create_person

@@ -10,6 +10,10 @@ class Rentals
     @rentals = []
   end
 
+  def add_rental(element)
+    @rentals << element
+  end
+
   def create_rental(books, persons)
     puts 'Select a book from the following list:'
     puts books.to_s

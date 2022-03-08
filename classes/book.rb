@@ -1,8 +1,8 @@
 require_relative 'rental'
 
 class Book
-  def initialize(title, author)
-    @id = rand(1..1000)
+  def initialize(title, author, id = rand(1..1000))
+    @id = id
     @title = title
     @author = author
     @rentals = []
