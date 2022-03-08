@@ -1,6 +1,6 @@
 require_relative './interfaces/home'
 require_relative './interfaces/tui'
-require_relative './interfaces/fileStorage'
+require_relative './interfaces/file_storage'
 
 def main
   @app = App.new
@@ -40,9 +40,9 @@ def main
       @app.rentals.show_all_rentals(@app.persons.persons)
     else
       puts 'Exiting session'
-      #save_json2files(@app.books.books, @app.persons.persons)
+      # save_json2files(@app.books.books, @app.persons.persons)
       save_json2files(@app.books.books, @app.persons.persons, @app.rentals.rentals)
-      #save_json2files
+      # save_json2files
       loading_effect
       # clear_screen
       # exit_greeting_message

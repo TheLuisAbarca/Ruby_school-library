@@ -2,8 +2,7 @@ require_relative 'books'
 require_relative 'persons'
 require_relative 'rentals'
 require_relative 'tui'
-require_relative 'fileStorage'
-
+require_relative 'file_storage'
 
 class App
   include Tui

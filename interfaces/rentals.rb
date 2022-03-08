@@ -5,7 +5,7 @@ require_relative 'tui'
 class Rentals
   include Tui
   attr_reader :rentals
-  
+
   def initialize
     @rentals = []
   end

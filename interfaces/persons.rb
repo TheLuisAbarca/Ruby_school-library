@@ -13,7 +13,7 @@ class Persons
   def add_person(element)
     @persons << element
   end
-  
+
   def find_by_id(id)
     @persons.find { |person| person.id == id }
   end
