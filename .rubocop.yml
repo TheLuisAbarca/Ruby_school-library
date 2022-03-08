@@ -10,7 +10,7 @@ AllCops:
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
-  Max: 20
+  Max: 60
 Metrics/AbcSize:
   Max: 50
 Metrics/ClassLength:
@@ -32,6 +32,8 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Metrics/CyclomaticComplexity:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -51,8 +53,4 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: false
 Naming/PredicateName:
-  Enabled: false
-Metrics/ClassLength:
-  Enabled: false
-Metrics/MethodLength:
   Enabled: false
