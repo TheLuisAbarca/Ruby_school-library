@@ -10,6 +10,14 @@ class Persons
     @persons = []
   end
 
+  def add_person(element)
+    @persons << element
+  end
+
+  def find_by_id(id)
+    @persons.find { |person| person.id == id }
+  end
+
   def create_person
     puts 'Do you want to create a student (1), or a teacher (2)? [Press or Input the number]:'
     print MAIN_INPUT_MESSAGE

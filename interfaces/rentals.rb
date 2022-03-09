@@ -4,9 +4,14 @@ require_relative 'tui'
 
 class Rentals
   include Tui
+  attr_reader :rentals
 
   def initialize
     @rentals = []
+  end
+
+  def add_rental(element)
+    @rentals << element
   end
 
   def create_rental(books, persons)
