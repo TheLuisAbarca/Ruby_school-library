@@ -8,7 +8,6 @@ def main
 
   show_main_options = lambda do
     include Tui
-    # clear_screen
     menu = "Please choose an option by entering a number:\n"\
            "1 - List all books\n"\
            "2 - List all people\n"\
@@ -40,14 +39,8 @@ def main
       @app.rentals.show_all_rentals(@app.persons.persons)
     else
       puts 'Exiting session'
-      # save_json2files(@app.books.books, @app.persons.persons)
       save_json2files(@app.books.books, @app.persons.persons, @app.rentals.rentals)
-      # save_json2files
       loading_effect
-      # clear_screen
-      # exit_greeting_message
-      # loading_effect
-      # clear_screen
     end
   end
 
