@@ -17,6 +17,9 @@ $ bundle install`
 
 * Now, run the command ruby filename.rb in your terminal to check if solutions are printed correctly.
 
+* To run test project locate on root directory and run the following code:
+> `$ rspec spec`
+
 
 ## Authors
 
