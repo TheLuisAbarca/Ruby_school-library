@@ -2,7 +2,7 @@ require_relative 'require_helper'
 
 RSpec.describe Teacher do
   before :each do
-    @teacher = Teacher.new(1000, 'The Doctor', 'Time Traveling' )
+    @teacher = Teacher.new(1000, 'The Doctor', 'Time Traveling')
   end
   it 'Takes three parameters and returns a Teacher object' do
     expect(@teacher).to be_an_instance_of Teacher
