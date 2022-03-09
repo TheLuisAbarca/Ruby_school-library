@@ -27,6 +27,7 @@ module FileStorage
 
   def save_persons(persons)
     File.new(PERSONS_FILE_PATH, 'w') unless File.exist?(PERSONS_FILE_PATH)
+    prsns = []
     persons.each do |person|
       p = { 'id' => person.id, 'age' => person.age, 'name' => person.name, 'role' => person.role }
       if person.role == 'teacher'
@@ -41,6 +42,7 @@ module FileStorage
 
   def save_rentals(rentals)
     File.new(RENTALS_FILE_PATH, 'w') unless File.exist?(RENTALS_FILE_PATH)
+    rntls = []
     rentals.each do |rental|
       r = { 'date' => rental.date, 'book' => rental.book.id, 'person' => rental.person.id }
       rntls << r
