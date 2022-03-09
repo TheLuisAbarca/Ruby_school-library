@@ -1,0 +1,8 @@
+require 'rspec'
+require './classes/book'
+require './classes/student'
+require './classes/teacher'
+require './classes/person'
+require './classes/classroom'
+require './classes/corrector'
+require './classes/rental'
